@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SocialShare - Giriş Yap veya Kaydol</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Titillium+Web&display=swap");
+      body,
+      html {
+        background: #f0f2f5;
+        color: #1c1e21;
+        line-height: 1.34;
+        margin: 0;
+        padding: 0;
+        font-family: "Titillium Web", sans-serif;
+      }
+      .main-container {
+        text-align: center;
+        margin: auto;
+        margin-top: 100px;
+        width: 100%;
+      }
+      .inside-container {
+        text-align: center;
+        padding: 20px;
+        background-color: white;
+        border-radius: 15px;
+        width: 400px;
+      }
+      .text-input {
+        width: 85%;
+        border-radius: 5px;
+        border: 1px solid rgb(235, 232, 232);
+        font-size: 1rem;
+        font-family: "Open Sans";
+        text-indent: 1.5rem;
+        outline: none;
+        height: 2rem;
+        margin-top: 15px;
+      }
+
+      .button-input {
+        width: 85%;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+        font-family: "Open Sans";
+        outline: none;
+        height: 2rem;
+        margin-top: 15px;
+        color: white;
+        background-color: #35a853;
+      }
+    </style>
+  </head>
+  <body>
+    <center class="main-container">
+      <h1 style="color: #35a853">socialshare</h1>
+    </center>
+    <center>
+      <center class="inside-container">
+        <form method="post" enctype="multipart/form-data">
+          <input
+            type="text"
+            name="username"
+            placeholder="Kullanıcı Adı"
+            class="text-input"
+          />
+          <br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Şifre"
+            class="text-input"
+          />
+          <br />
+          <input type="submit" value="Giriş Yap" class="button-input" />
+          <br />
+          <br />
+          <a href="/forgot-password" style="text-decoration: none; color: blue"
+            >Şifreni mi unuttun?</a
+          >
+          <hr />
+          <input
+            onclick="document.location = '/sign-up'"
+            type="button"
+            style="background-color: #1877f2"
+            value="Yeni Hesap Oluştur"
+            class="button-input"
+          />
+        </form>
+      </center>
+    </center>
+  </body>
+</html>
