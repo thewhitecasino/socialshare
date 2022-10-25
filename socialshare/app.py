@@ -110,8 +110,7 @@ def start_game(game):
 
     if game == "battleship":
         game_id = randint(9999, 999999)
-        new_post = Post(author=current_user.id, reference_url=f"http:"
-                                                              f"//en.battleship-game.org/id{game_id}",
+        new_post = Post(author=current_user.id, reference_url=f"https://en.battleship-game.org/id{game_id}",
                         content=f"{current_user.username} battleship oynamak istiyor", tags="#game&&#image",
                         content_url="https://www.19fortyfive.com/wp-content/uploads/2021/07"
                                     "/USS-New-Jersey.jpg-1-1024x576.jpg"
@@ -147,3 +146,8 @@ def return_chess_piece(image_path):
 @login_required
 def play_chess(chess_id):
     return flask.render_template("chess.html")
+
+
+@app.errorhandler(500)
+def error_handler(e):
+    return flask.redirect("/")
